@@ -1,0 +1,283 @@
+body {
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+section {
+    margin: 0;
+    padding: 60px 20px;
+}
+.gradient-bg {
+    background: linear-gradient(45deg, #ff6b6b, #f94c4c);
+    color: white;
+}
+.navbar {
+    background-color: white;
+    padding: 20px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.navbar a {
+    color: black;
+    transition: color 0.3s, background 0.3s;
+}
+.navbar a:hover {
+    background: #001f3f;
+    color: white;
+    border-radius: 5px;
+}
+.hero-section {
+    position: relative;
+    height: 100vh;
+    padding: 0;
+}
+.carousel-item {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+.carousel-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+.carousel-caption {
+    position: absolute;
+    left: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    color: white;
+    text-align: left;
+}
+.carousel-caption h1{
+    font-size: 5rem;
+    font-weight: bold;
+}
+.carousel-caption p{
+    font-size: 1.4rem;
+}
+.carousel-caption h1 span{
+    /* color: #002952; */
+    color: #00bfff;
+}
+.carousel-control-prev, .carousel-control-next {
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+.hero-section:hover .carousel-control-prev,
+.hero-section:hover .carousel-control-next {
+    opacity: 1;
+}
+.scroll-down {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+.scroll-down a {
+    font-size: 24px;
+    color: white;
+    text-decoration: none;
+}
+.scroll-down a:hover {
+    text-decoration: underline;
+}
+footer {
+    min-height: 10vh;
+    background-color: #f8f9fa;
+    padding: 20px 0;
+}
+.about-section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+}
+.about-section img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+.about-content {
+    padding: 20px;
+}
+.about-header {
+    font-size: 2.5rem;
+    color: #001f3f;
+    margin-bottom: 20px;
+}
+.productions-section .card {
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Light shadow */
+transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+.productions-section .card:hover {
+transform: scale(1.05); /* Slightly increases the size on hover */
+box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Adds a more prominent shadow on hover */
+}
+@media (max-width: 768px) {
+    .about-section {
+        flex-direction: column;
+    }
+    .carousel-caption h1{
+        font-size: 3rem;
+    }
+    .carousel-caption p{
+        font-size: 1.1rem;
+    }
+}
+.developments-section {
+            background-color: #001f3f; /* Dark navy blue background */
+            padding: 40px 20px;
+            color: white;
+        }
+        .developments-section .item-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+        .developments-section .item-card {
+            flex: 1 1 calc(33.333% - 10px); /* Three items per row */
+            background-color: #002952; /* Slightly lighter navy blue */
+            border: 1px solid #003366;
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 1rem;
+            color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+        }
+        .developments-section .item-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.7);
+            background-color: #004080; /* Highlighted navy blue */
+        }
+        @media (max-width: 768px) {
+            .developments-section .item-card {
+                flex: 1 1 calc(50% - 10px); /* Two items per row on tablets */
+            }
+        }
+        @media (max-width: 576px) {
+            .developments-section .item-card {
+                flex: 1 1 100%; /* One item per row on small screens */
+            }
+        }
+        .kids-focus-section {
+            background-color: #f8f9fa; /* Light background */
+            padding: 30px 15px;
+            border-radius: 10px;
+        }
+        .kids-focus-section .item-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+        }
+        .kids-focus-section .item-card {
+            flex: 1 1 calc(33.333% - 15px); /* Three items per row */
+            background-color: white;
+            color: black;
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 1rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .kids-focus-section .item-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        @media (max-width: 768px) {
+            .kids-focus-section .item-card {
+                flex: 1 1 calc(50% - 15px); /* Two items per row on tablets */
+            }
+        }
+        @media (max-width: 576px) {
+            .kids-focus-section .item-card {
+                flex: 1 1 100%; /* One item per row on small screens */
+            }
+        }
+        .contact-section {
+            background-color: #001f3f; /* Dark navy blue */
+            color: white;
+            padding: 40px 20px;
+        }
+        .contact-section .row {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 20px;
+        }
+        .contact-section .content {
+            flex: 1 1 50%; /* Content on the left */
+            padding: 20px;
+        }
+        .contact-section .content h3 {
+            color: #00bfff; /* Light blue for the title */
+        }
+        .contact-section .content p {
+            margin: 10px 0;
+            font-size: 1rem;
+        }
+        .contact-section .content .icon {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            font-size: 1rem;
+        }
+        .contact-section .content .icon i {
+            font-size: 1.5rem;
+            color: #00bfff;
+            margin-right: 10px;
+        }
+        .contact-section .form {
+            flex: 1 1 50%; /* Form on the right */
+            padding: 20px;
+            background-color: #002952; /* Slightly lighter navy blue */
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+        }
+        .contact-section input,
+        .contact-section textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #003366;
+            border-radius: 5px;
+            background-color: #001f3f;
+            color: white;
+        }
+        .contact-section input:focus,
+        .contact-section textarea:focus {
+            outline: none;
+            border-color: #00bfff;
+        }
+        .contact-section button {
+            background-color: #00bfff;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .contact-section button:hover {
+            background-color: #008cba;
+        }
+        @media (max-width: 768px) {
+            .contact-section .row {
+                flex-direction: column;
+            }
+            .contact-section .content,
+            .contact-section .form {
+                flex: 1 1 100%;
+            }
+        }
